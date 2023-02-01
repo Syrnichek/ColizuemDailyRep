@@ -14,16 +14,16 @@ public class ManageUserController : Controller
     
     [HttpGet]
     [Route("home/userGet")]
-    public void UserGet()
+    public void UserGet(string Username)
     {
-        
+        _manageUserService.UserGet(Username);
     }
     
     [HttpGet]
     [Route("home/userVisitCheck")]
-    public void UserVisitCheck()
+    public void UserVisitCheck(string Username)
     {
-        
+        _manageUserService.UserVisitCheck(Username);
     }
     
     [HttpGet]

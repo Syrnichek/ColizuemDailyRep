@@ -2,7 +2,7 @@ namespace ColizeumDaily.Models;
 
 public interface IManageUserService
 {
-    public void UserGet(string Username);
+    public UserModel UserGet(string Username);
 
     public void UserVisitCheck(string Username);
 
