@@ -14,9 +14,9 @@ public class ManageUserController : Controller
     
     [HttpGet]
     [Route("home/userGet")]
-    public void UserGet(string Username)
+    public UserModel UserGet(string Username)
     {
-        _manageUserService.UserGet(Username);
+        return _manageUserService.UserGet(Username);
     }
     
     [HttpGet]
