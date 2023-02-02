@@ -36,3 +36,4 @@ C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\Colize
 C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\obj\Debug\net7.0\ColizeumDaily.pdb
 C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\obj\Debug\net7.0\ColizeumDaily.genruntimeconfig.cache
 C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\obj\Debug\net7.0\ref\ColizeumDaily.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\ColizeumDaily.staticwebassets.runtime.json
