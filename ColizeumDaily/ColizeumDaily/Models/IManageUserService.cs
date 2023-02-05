@@ -8,4 +8,5 @@ public interface IManageUserService
 
     public void UserReg(string Username, string TelegramUsername);
     
+    public void StreakDelete(); 
 }

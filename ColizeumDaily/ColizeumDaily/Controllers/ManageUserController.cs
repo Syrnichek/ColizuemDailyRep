@@ -32,4 +32,11 @@ public class ManageUserController : Controller
     {
         _manageUserService.UserReg(Username, TelegramUsername);
     }
+    
+    [HttpGet] 
+    [Route("home/streakDelete")] 
+    public void StreakDelete() 
+    { 
+        _manageUserService.StreakDelete(); 
+    } 
 }

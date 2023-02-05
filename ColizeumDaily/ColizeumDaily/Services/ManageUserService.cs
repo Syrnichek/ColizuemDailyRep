@@ -45,4 +45,25 @@ public class ManageUserService : IManageUserService
             applicationContext.SaveChanges();
         }
     }
+    
+    public void StreakDelete() 
+    { 
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>(); 
+         
+        var options = optionsBuilder.Options; 
+         
+        var applicationContext = new ApplicationContext(options); 
+         
+        var todayDate = DateTime.Now; 
+        var today = todayDate.DayOfWeek; 
+ 
+        if (today == DayOfWeek.Monday && todayDate.Hour == 0) 
+        { 
+            foreach (var user in applicationContext.users.Where(user => user.daysstreak > 0)) 
+            { 
+                user.daysstreak = 0; 
+            } 
+            applicationContext.SaveChanges(); 
+        } 
+    } 
 }
