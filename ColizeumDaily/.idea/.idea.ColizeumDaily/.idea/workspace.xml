@@ -6,7 +6,41 @@
     <projectFile profileName="https">ColizeumDaily/ColizeumDaily.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30be34df-b37e-4e93-a9f5-dede2e24a3be" name="Changes" comment="" />
+    <list default="true" id="30be34df-b37e-4e93-a9f5-dede2e24a3be" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ColizeumDaily/Services/StreakDeleteHostedService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ColizeumDaily/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ColizeumDaily/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/Controllers/ManageUserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/Controllers/ManageUserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/Models/IManageUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/Interfaces/IManageUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/Services/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/Services/ApplicationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/Services/ManageUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/Services/ManageUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/ColizeumDaily.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/ColizeumDaily.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/ColizeumDaily.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/ColizeumDaily.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/ColizeumDaily.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/ColizeumDaily.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/bin/Debug/net7.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/ColizeumDaily.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/ColizeumDaily.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/ColizeumDaily.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/ColizeumDaily.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ColizeumDaily.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ref/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/ref/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/refint/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/refint/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/Debug/net7.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColizeumDaily/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ColizeumDaily/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,13 +54,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/17e38fc279b3572621a1a0737741283fe2bdc3149cd2f3b3fd79191674166ecd/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2048d5b61a78bef52894eecf448e34a883cb22e1abb6711e0eb6d690a3b0/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/436ac6362f325ef11dc7d554acc2ca9296782513c7748bc6ee7fa54273f9ff/DateTime.Windows.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4a4e32cea57c17f7bee73f3df362944a221b8f84d193ae366a93bb192bbd/MvcServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/514db9918645d533daccb94eba3fb284294da1c4d4440abd0cf214f15dda490/EntityFinder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce719136c12653cd464ae0b247771f618b92f8beec14c1010b5278a7d0fd1f/DbContextServices.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,25 +64,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "rider.external.source.directories": [
-      "C:\\Users\\Colizeum_Bibirevo\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Colizeum_Bibirevo\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Colizeum_Bibirevo\\AppData\\Local\\Symbols\\src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Colizeum_Bibirevo\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Colizeum_Bibirevo\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Colizeum_Bibirevo\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ColizeumDaily: http">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ColizeumDaily/ColizeumDaily/wwwroot/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -122,13 +150,27 @@
       <workItem from="1675075441626" duration="14730000" />
       <workItem from="1675323601291" duration="20554000" />
       <workItem from="1675352136493" duration="8438000" />
+      <workItem from="1675609906021" duration="605000" />
+      <workItem from="1675930828090" duration="5962000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
