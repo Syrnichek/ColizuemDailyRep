@@ -1,5 +1,5 @@
-using System.ComponentModel.DataAnnotations;
 using ColizeumDaily.Models;
+using ColizeumDaily.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace ColizeumDaily.Services;

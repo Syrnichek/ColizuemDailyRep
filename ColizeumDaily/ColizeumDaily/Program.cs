@@ -1,6 +1,5 @@
-using ColizeumDaily.Models;
+using ColizeumDaily.Interfaces;
 using ColizeumDaily.Services;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

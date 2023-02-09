@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H3GkFmePQ8fVtivQ/X2ygTWNbqXYLJ0rmc0spRGEPqA=",
+  "Hash": "xdaDx+fyVTtD7JjSNyE44B1VF4DLGr6nz82wWRJLkh0=",
   "Source": "ColizeumDaily",
   "BasePath": "_content/ColizeumDaily",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ColizeumDaily\\wwwroot",
       "Source": "ColizeumDaily",
-      "ContentRoot": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\",
       "BasePath": "_content/ColizeumDaily",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\index.html",
       "SourceId": "ColizeumDaily",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\",
       "BasePath": "_content/ColizeumDaily",
       "RelativePath": "index.html",
       "AssetKind": "All",
