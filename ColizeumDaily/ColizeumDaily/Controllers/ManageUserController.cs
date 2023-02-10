@@ -14,21 +14,21 @@ public class ManageUserController : Controller
     }
     
     [HttpGet]
-    [Route("home/userGet")]
+    [Route("api/userGet")]
     public UserModel UserGet(string Username)
     {
         return _manageUserService.UserGet(Username);
     }
     
     [HttpGet]
-    [Route("home/userVisitCheck")]
+    [Route("api/userVisitCheck")]
     public void UserVisitCheck(string Username)
     {
         _manageUserService.UserVisitCheck(Username);
     }
     
     [HttpGet]
-    [Route("home/userReg")]
+    [Route("api/userReg")]
     public void UserReg(string Username, string TelegramUsername)
     {
         _manageUserService.UserReg(Username, TelegramUsername);
