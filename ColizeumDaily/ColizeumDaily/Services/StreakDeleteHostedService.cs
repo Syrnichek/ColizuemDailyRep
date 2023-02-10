@@ -17,7 +17,7 @@ namespace ColizeumDaily.Services
         {
             _logger.LogInformation("Streak Delete Hosted Service running");
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromHours(1));
+                TimeSpan.FromHours(2));
             return Task.CompletedTask;
         }
         
