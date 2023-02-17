@@ -15,29 +15,29 @@ public class ManageUserController : Controller
     
     [HttpGet]
     [Route("api/userGet")]
-    public UserModel UserGet(string Username)
+    public UserModel UserGet(int UserNumber)
     {
-        return _manageUserService.UserGet(Username);
+        return _manageUserService.UserGet(UserNumber);
     }
     
     [HttpGet]
     [Route("api/userVisitCheck")]
-    public void UserVisitCheck(string Username)
+    public void UserVisitCheck(int UserNumber)
     {
-        _manageUserService.UserVisitCheck(Username);
+        _manageUserService.UserVisitCheck(UserNumber);
     }
-    
+
     [HttpGet]
-    [Route("api/userReg")]
-    public void UserReg(string Username, string TelegramUsername)
+    [Route("api/nightPacksCheck")]
+    public void NightPacksCheck(int UserNumber)
     {
-        _manageUserService.UserReg(Username, TelegramUsername);
+        _manageUserService.NightPacksCheck(UserNumber);
     }
-    
-    [HttpGet] 
-    [Route("home/streakDelete")] 
-    public void StreakDelete() 
-    { 
-        _manageUserService.StreakDelete(); 
-    } 
+
+        [HttpGet]
+    [Route("api/userReg")]
+    public void UserReg(int UserNumber, string TelegramUsername)
+    {
+        _manageUserService.UserReg(UserNumber, TelegramUsername);
+    }
 }

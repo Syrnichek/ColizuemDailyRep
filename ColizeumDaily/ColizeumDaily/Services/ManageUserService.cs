@@ -7,32 +7,48 @@ namespace ColizeumDaily.Services;
 public class ManageUserService : IManageUserService
 {
     
-    public UserModel UserGet(string Username)
+    
+    
+    public UserModel UserGet(int UserNumber)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
  
         var options = optionsBuilder.Options;
 
         ApplicationContext applicationContext = new ApplicationContext(options);
-        UserModel user = applicationContext.users.FirstOrDefault(u => u.username == Username);
+        UserModel user = applicationContext.users.FirstOrDefault(u => u.usernumber == UserNumber);
         return user;
     }
 
-    public void UserVisitCheck(string Username)
+    public void UserVisitCheck(int UserNumber)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
  
         var options = optionsBuilder.Options;
         
         ApplicationContext applicationContext = new ApplicationContext(options);
-        var user = UserGet(Username);
+        var user = UserGet(UserNumber);
         user.daysstreak++;
         user.visitdate = DateTime.UtcNow.AddHours(3);
         applicationContext.users.Update(user);
         applicationContext.SaveChanges();
     }
 
-    public void UserReg(string Username, string TelegramUsername)
+    public void NightPacksCheck(int UserNumber)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+ 
+        var options = optionsBuilder.Options;
+        
+        ApplicationContext applicationContext = new ApplicationContext(options);
+        var user = UserGet(UserNumber);
+        user.nightpacksstreak++;
+        user.visitdate = DateTime.UtcNow.AddHours(3);
+        applicationContext.users.Update(user);
+        applicationContext.SaveChanges();
+    }
+
+    public void UserReg(int UserNumber, string TelegramUserName)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
  
@@ -40,30 +56,9 @@ public class ManageUserService : IManageUserService
         
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
-            UserModel user = new UserModel { username = Username, telegramusername = TelegramUsername};
+            UserModel user = new UserModel { usernumber = UserNumber, telegramusername = TelegramUserName};
             applicationContext.users.Add(user);
             applicationContext.SaveChanges();
         }
     }
-    
-    public void StreakDelete() 
-    { 
-        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>(); 
-         
-        var options = optionsBuilder.Options; 
-         
-        var applicationContext = new ApplicationContext(options); 
-         
-        var todayDate = DateTime.Now; 
-        var today = todayDate.DayOfWeek; 
- 
-        if (today == DayOfWeek.Monday && todayDate.Hour == 0) 
-        { 
-            foreach (var user in applicationContext.users.Where(user => user.daysstreak > 0)) 
-            { 
-                user.daysstreak = 0; 
-            } 
-            applicationContext.SaveChanges(); 
-        } 
-    } 
 }

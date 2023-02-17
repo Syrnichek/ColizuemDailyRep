@@ -4,11 +4,11 @@ namespace ColizeumDaily.Interfaces;
 
 public interface IManageUserService
 {
-    public UserModel UserGet(string Username);
+    public UserModel UserGet(int UserNumber);
 
-    public void UserVisitCheck(string Username);
+    public void UserVisitCheck(int UserNumber);
 
-    public void UserReg(string Username, string TelegramUsername);
-
-    public void StreakDelete();
+    public void NightPacksCheck(int UserNumber);
+    
+    public void UserReg(int UserNumber, string TelegramUsername);
 }
