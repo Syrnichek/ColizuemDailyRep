@@ -1,8 +1,24 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\index.html",
-      "PackagePath": "staticwebassets\\index.html"
+      "Id": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\css\\bgimage.jpg",
+      "PackagePath": "staticwebassets\\css\\bgimage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\mainPage.html",
+      "PackagePath": "staticwebassets\\mainPage.html"
+    },
+    {
+      "Id": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\registrationPage.html",
+      "PackagePath": "staticwebassets\\registrationPage.html"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ColizeumDaily.Microsoft.AspNetCore.StaticWebAssets.props",

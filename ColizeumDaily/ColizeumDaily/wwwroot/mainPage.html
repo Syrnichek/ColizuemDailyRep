@@ -19,10 +19,10 @@
     <main class="content">
         <p style="font-size: 30px; margin: 0; padding: 1em 0;">Добро пожаловать. Cнова</p>
         
-        <p>
-        <input class="inputBox" id="userNumber" type="text" name="number" placeholder="Номер пользователя"/>
-        <button class="buttonContent" style=""> Поиск</button>
-        </p>
+        <form name="search">
+            <input class="inputBox" type="text" name="userNumber" placeholder="Номер пользователя"/>
+            <input class="buttonContent" type="submit" name ="getUserButton" value="Поиск"> 
+        </form>
         
             <table class="tables">
                 <caption>
@@ -86,13 +86,21 @@
         <a class="button" href="registrationPage.html"> Регистрация</a>
     </p>
 </div>
-    
-<script 
-        src="js/site.js" asp-append-version="true">
-</script>
 
-<script type="text/javascript">
-        getItems();
+<script>
+    function getUser(e) {
+        var userNumber = document.search.userNumber;
+        var val = userNumber.value;
+        if(val.length>5){
+            alert("Недопустимая длина строки");
+            e.preventDefault();
+        }
+        else
+            alert("Отправка разрешена");
+    }
+
+    var getUserButton = document.search.getUserButton;
+    getUserButton.addEventListener("click", getUser);
 </script>
 
 </body>
