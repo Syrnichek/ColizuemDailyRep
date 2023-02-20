@@ -39,15 +39,14 @@ namespace ColizeumDaily.Services
                     user.daysstreak = 0;
                 } 
                 _logger.LogInformation("Очистка стрика произведена");
-            } 
-            
-            foreach (var user in applicationContext.users.Where(user => user.nightpacksstreak > 4))
-            {
-                user.nightpacksstreak = 0;  
                 
+                foreach (var user in applicationContext.users.Where(user => user.nightpacksstreak > 4))
+                {
+                    user.nightpacksstreak = 0;
+                } 
                 _logger.LogInformation("Очистка стрика ночных пакетов призведена");
-            } 
-            
+            }
+
             applicationContext.SaveChanges(); 
             _logger.LogInformation("Streak Delete Hosted Service running");
         }
