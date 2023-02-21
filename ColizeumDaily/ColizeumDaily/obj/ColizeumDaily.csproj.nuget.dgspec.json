@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\ColizeumDaily.csproj": {}
+    "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\ColizeumDaily.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\ColizeumDaily.csproj": {
+    "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\ColizeumDaily.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\ColizeumDaily.csproj",
+        "projectUniqueName": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\ColizeumDaily.csproj",
         "projectName": "ColizeumDaily",
-        "projectPath": "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\ColizeumDaily.csproj",
-        "packagesPath": "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\obj\\",
+        "projectPath": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\ColizeumDaily.csproj",
+        "packagesPath": "C:\\Users\\Colizeum_Bibirevo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Mufiesh.DESKTOP-S9IMMIL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Colizeum_Bibirevo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nexus.action-media.ru/repository/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +40,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.1, )"
@@ -77,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
