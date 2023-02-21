@@ -37,6 +37,10 @@ public class ManageUserService : IManageUserService
         {
             var user = UserGet(UserNumber);
             
+            if (user.visitdate.Date == DateTime.Now.Date)
+            {
+                throw new Exception("User is already checked");
+            }
             user.daysstreak++;
             user.visitdate = DateTime.UtcNow.AddHours(3);
             applicationContext.users.Update(user);

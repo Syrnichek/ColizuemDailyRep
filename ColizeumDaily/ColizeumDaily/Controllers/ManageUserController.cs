@@ -24,8 +24,15 @@ public class ManageUserController : Controller
     [Route("api/userVisitCheck")]
     public IActionResult UserVisitCheck(string UserNumber)
     {
-        _manageUserService.UserVisitCheck(UserNumber);
-        return Ok();
+        try
+        {
+            _manageUserService.UserVisitCheck(UserNumber);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(245, "Сегодня пользователь уже отмечался");
+        }
     }
 
     [HttpGet]
@@ -39,7 +46,7 @@ public class ManageUserController : Controller
         }
         catch (Exception ex)
         {
-            return StatusCode(421, "Сегодня пользователь уже отмечался");
+            return StatusCode(245, "Сегодня пользователь уже отмечался");
         }
     }
 

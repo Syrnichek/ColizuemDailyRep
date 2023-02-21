@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H3GkFmePQ8fVtivQ/X2ygTWNbqXYLJ0rmc0spRGEPqA=",
+  "Hash": "x/HvtSuhQKleUTUEIEE4UiEIZeXQZ8fETDrG3Q3YYVA=",
   "Source": "ColizeumDaily",
   "BasePath": "_content/ColizeumDaily",
   "Mode": "Default",
@@ -17,7 +17,24 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\123.html",
+      "SourceId": "ColizeumDaily",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\",
+      "BasePath": "_content/ColizeumDaily",
+      "RelativePath": "123.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\123.html"
+    },
+    {
+      "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\css\\bgimage.jpg",
       "SourceId": "ColizeumDaily",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\",

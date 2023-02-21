@@ -1,8 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\index.html",
-      "PackagePath": "staticwebassets\\index.html"
+      "Id": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\123.html",
+      "PackagePath": "staticwebassets\\123.html"
+    },
+    {
+      "Id": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\css\\bgimage.jpg",
+      "PackagePath": "staticwebassets\\css\\bgimage.jpg"
     },
     {
       "Id": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\css\\site.css",

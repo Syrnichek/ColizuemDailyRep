@@ -71,10 +71,10 @@
                     <td></td>
                 </tr>
             </table>
-            <p>
-                <button class="buttonContent" style=""> Ежедневный бонус</button>
-                <button class="buttonContent" style=""> Ночной пакет</button>
-            </p>
+            <form name="check">
+                <button class="buttonContent" type="submit" name ="userDailyCheckButton"> Ежедневный бонус</button>
+                <button class="buttonContent" type="submit" name ="userNightPackCheckButton"> Ночной пакет</button>
+            </form>
         </main>
 </div>
 
@@ -87,21 +87,7 @@
     </p>
 </div>
 
-<script>
-    function getUser(e) {
-        var userNumber = document.search.userNumber;
-        var val = userNumber.value;
-        if(val.length>5){
-            alert("Недопустимая длина строки");
-            e.preventDefault();
-        }
-        else
-            alert("Отправка разрешена");
-    }
-
-    var getUserButton = document.search.getUserButton;
-    getUserButton.addEventListener("click", getUser);
-</script>
+<script src = "js/site.js"> </script>
 
 </body>
 </html>
