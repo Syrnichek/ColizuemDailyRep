@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0xFU9YJ1/OeKYR7zD1PFjTMyDQQ4b7K6h3ble8t0+zk=",
+  "Hash": "H3GkFmePQ8fVtivQ/X2ygTWNbqXYLJ0rmc0spRGEPqA=",
   "Source": "ColizeumDaily",
   "BasePath": "_content/ColizeumDaily",
   "Mode": "Default",
@@ -17,7 +17,7 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\css\\bgimage.jpg",
+      "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\index.html",
       "SourceId": "ColizeumDaily",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\",

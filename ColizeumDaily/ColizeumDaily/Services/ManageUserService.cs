@@ -6,64 +6,80 @@ namespace ColizeumDaily.Services;
 
 public class ManageUserService : IManageUserService
 {
+    private readonly ILogger<ManageUserService> _logger;
     
-    public UserModel UserGet(string Username)
+    public ManageUserService(ILogger<ManageUserService> logger)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
- 
-        var options = optionsBuilder.Options;
-
-        ApplicationContext applicationContext = new ApplicationContext(options);
-        UserModel user = applicationContext.users.FirstOrDefault(u => u.username == Username);
-        return user;
+        _logger = logger;
     }
 
-    public void UserVisitCheck(string Username)
+    public UserModel UserGet(string UserNumber)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
- 
         var options = optionsBuilder.Options;
-        
-        ApplicationContext applicationContext = new ApplicationContext(options);
-        var user = UserGet(Username);
-        user.daysstreak++;
-        user.visitdate = DateTime.UtcNow.AddHours(3);
-        applicationContext.users.Update(user);
-        applicationContext.SaveChanges();
-    }
 
-    public void UserReg(string Username, string TelegramUsername)
-    {
-        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
- 
-        var options = optionsBuilder.Options;
-        
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
-            UserModel user = new UserModel { username = Username, telegramusername = TelegramUsername};
+            UserModel user = applicationContext.users.FirstOrDefault(u => u.usernumber == UserNumber);
+            if (user == null)
+                _logger.LogInformation("Введите правильное значение номера");
+            return user;
+        }
+    }
+
+    public void UserVisitCheck(string UserNumber)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+ 
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            var user = UserGet(UserNumber);
+            
+            user.daysstreak++;
+            user.visitdate = DateTime.UtcNow.AddHours(3);
+            applicationContext.users.Update(user);
+            applicationContext.SaveChanges();
+        }
+    }
+
+    public void NightPacksCheck(string UserNumber)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+ 
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            var user = UserGet(UserNumber);
+            if (user.visitdate.Date == DateTime.Now.Date)
+            {
+                throw new Exception("User is already checked");
+            }
+            user.nightpacksstreak++;
+            user.visitdate = DateTime.UtcNow.AddHours(3);
+            applicationContext.users.Update(user);
+            applicationContext.SaveChanges();
+        }
+    }
+
+    public void UserReg(string UserNumber, string TelegramUserName)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+ 
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            if (applicationContext.users.FirstOrDefault(u => u.usernumber == UserNumber) != null)
+            {
+                throw new Exception("User already exists");
+            }
+
+            UserModel user = new UserModel { usernumber = UserNumber, telegramusername = TelegramUserName };
             applicationContext.users.Add(user);
             applicationContext.SaveChanges();
         }
     }
-    
-    public void StreakDelete() 
-    { 
-        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>(); 
-         
-        var options = optionsBuilder.Options; 
-         
-        var applicationContext = new ApplicationContext(options); 
-         
-        var todayDate = DateTime.Now; 
-        var today = todayDate.DayOfWeek; 
- 
-        if (today == DayOfWeek.Monday && todayDate.Hour == 0) 
-        { 
-            foreach (var user in applicationContext.users.Where(user => user.daysstreak > 0)) 
-            { 
-                user.daysstreak = 0; 
-            } 
-            applicationContext.SaveChanges(); 
-        } 
-    } 
 }

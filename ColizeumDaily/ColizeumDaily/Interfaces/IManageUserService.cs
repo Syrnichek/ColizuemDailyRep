@@ -1,14 +1,15 @@
 using ColizeumDaily.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ColizeumDaily.Interfaces;
 
 public interface IManageUserService
 {
-    public UserModel UserGet(string Username);
+    public UserModel UserGet(string UserNumber);
 
-    public void UserVisitCheck(string Username);
+    public void UserVisitCheck(string UserNumber);
 
-    public void UserReg(string Username, string TelegramUsername);
-
-    public void StreakDelete();
+    public void NightPacksCheck(string UserNumber);
+    
+    public void UserReg(string UserNumber, string TelegramUsername);
 }

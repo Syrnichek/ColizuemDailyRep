@@ -22,9 +22,14 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/19ba5a289f2afd3f4d5e862cb3f3efee6181683a31ee31b86c2298b1f51114b/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2048d5b61a78bef52894eecf448e34a883cb22e1abb6711e0eb6d690a3b0/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/514db9918645d533daccb94eba3fb284294da1c4d4440abd0cf214f15dda490/EntityFinder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7b3b6985aad11c5d633d75b545f5f5f4fc7e50918ad1cb9f6b615682f5bfb76d/SingleQueryingEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Kzth631elpY0TGmNDQRqxjEKNE" />
   <component name="ProjectViewState">
@@ -132,11 +137,7 @@
       <workItem from="1675352136493" duration="8438000" />
       <workItem from="1675609906021" duration="605000" />
       <workItem from="1675930828090" duration="5962000" />
-      <workItem from="1676273223536" duration="18604000" />
-      <workItem from="1676297886190" duration="18000" />
-      <workItem from="1676314948090" duration="79000" />
-      <workItem from="1676387987147" duration="742000" />
-      <workItem from="1676626438416" duration="4967000" />
+      <workItem from="1676877425315" duration="23232000" />
     </task>
     <servers />
   </component>

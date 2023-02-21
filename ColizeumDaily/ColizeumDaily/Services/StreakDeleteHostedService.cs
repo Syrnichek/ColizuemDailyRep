@@ -17,7 +17,7 @@ namespace ColizeumDaily.Services
         {
             _logger.LogInformation("Streak Delete Hosted Service running");
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromHours(2));
+                TimeSpan.FromMinutes(30));
             return Task.CompletedTask;
         }
         
@@ -36,12 +36,18 @@ namespace ColizeumDaily.Services
             { 
                 foreach (var user in applicationContext.users.Where(user => user.daysstreak > 0)) 
                 { 
-                    user.daysstreak = 0; 
+                    user.daysstreak = 0;
                 } 
-                applicationContext.SaveChanges(); 
                 _logger.LogInformation("Очистка стрика произведена");
-            } 
+                
+                foreach (var user in applicationContext.users.Where(user => user.nightpacksstreak > 4))
+                {
+                    user.nightpacksstreak = 0;
+                } 
+                _logger.LogInformation("Очистка стрика ночных пакетов призведена");
+            }
 
+            applicationContext.SaveChanges(); 
             _logger.LogInformation("Streak Delete Hosted Service running");
         }
         
