@@ -31,7 +31,7 @@ public class ManageUserController : Controller
         }
         catch (Exception ex)
         {
-            return StatusCode(245, "Сегодня пользователь уже отмечался");
+            return StatusCode(246, "Сегодня пользователь уже отмечался");
         }
     }
 
@@ -50,7 +50,7 @@ public class ManageUserController : Controller
         }
     }
 
-    [HttpPost]
+    [HttpGet]
     [Route("api/userReg")]
     public IActionResult UserReg(string UserNumber, string TelegramUsername)
     {

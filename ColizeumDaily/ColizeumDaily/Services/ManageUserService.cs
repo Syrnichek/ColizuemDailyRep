@@ -57,12 +57,13 @@ public class ManageUserService : IManageUserService
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
             var user = UserGet(UserNumber);
-            if (user.visitdate.Date == DateTime.Now.Date)
+            
+            if (user.nightpackvisitdate.Date == DateTime.Now.Date)
             {
                 throw new Exception("User is already checked");
             }
             user.nightpacksstreak++;
-            user.visitdate = DateTime.UtcNow.AddHours(3);
+            user.nightpackvisitdate = DateTime.UtcNow.AddHours(3);
             applicationContext.users.Update(user);
             applicationContext.SaveChanges();
         }

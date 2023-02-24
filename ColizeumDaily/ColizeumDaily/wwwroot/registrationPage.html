@@ -18,18 +18,29 @@
 
     <main class="content">
         <p style="font-size: 30px; margin: 0; padding: 1em 0;">Регистрация</p>
-
-        <p>
-            <input class="inputBox" id="userNumber" type="text" name="number" placeholder="Номер пользователя"/>
-        </p>
+        
+        <form name="numberEnter" onsubmit="return false;">
+            <input class="inputBox" id="userNumber" type="text" placeholder="Номер пользователя"/>
+        </form>
         
         <p>
-            <input class="inputBox" id="userTelegram" type="text" name="number" placeholder="Телеграмм пользователя"/>
         </p>
         
+        <form name="telegramEnter" onsubmit="return false;">
+            <input class="inputBox" id="userTelegram" type="text" placeholder="Телеграмм пользователя"/>
+        </form>
+        
         <p>
-            <button class="buttonContent" style="width: 300px; "> Регистрация пользователя</button>
         </p>
+        
+        <form name="userReg" onsubmit="return false;">
+            <input class="buttonContent" type="submit" name="userRegistration" value="Регистрация пользователя" style="width: 300px; "/>
+        </form>
+        
+        <p>
+        </p>
+        
+        <div id="printBlock" class="regtext"></div>
     </main>
 </div>
 
@@ -42,13 +53,7 @@
     </p>
 </div>
 
-<script
-        src="js/site.js" asp-append-version="true">
-</script>
-
-<script type="text/javascript">
-    getItems();
-</script>
+<script src="js/regPage.js"></script>
 
 </body>
 </html>

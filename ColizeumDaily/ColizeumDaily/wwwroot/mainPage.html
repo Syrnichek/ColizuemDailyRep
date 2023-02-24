@@ -19,12 +19,25 @@
     <main class="content">
         <p style="font-size: 30px; margin: 0; padding: 1em 0;">Добро пожаловать. Cнова</p>
         
-        <form name="search">
-            <input class="inputBox" type="text" name="userNumber" placeholder="Номер пользователя"/>
+        <form name="search" onsubmit="return false;">
+            <input class="inputBox" type="text" id="userNumber" placeholder="Номер пользователя"/>
             <input class="buttonContent" type="submit" name ="getUserButton" value="Поиск"> 
         </form>
         
-        <form name="check">
+        <p>
+        </p>
+        <div class="usertext">
+            <div id="userNumberBlock"></div>
+            <div id="telegramUserNameBlock"></div>
+            <div id="daysStreakBlock"></div>
+            <div id="nightPacksStreakBlock"></div>
+            <div id="visitDateBlock"></div>
+            <div id="nightPackVisitDateBlock"></div>
+        </div>
+        <p>
+        </p>
+        
+        <form name="check" onsubmit="return false;">
             <button class="buttonContent" type="submit" name ="userDailyCheckButton"> Ежедневный бонус</button>
             <button class="buttonContent" type="submit" name ="userNightPackCheckButton"> Ночной пакет</button>
         </form>

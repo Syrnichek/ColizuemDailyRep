@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "x/HvtSuhQKleUTUEIEE4UiEIZeXQZ8fETDrG3Q3YYVA=",
+  "Hash": "+sTIn1wyUFzIXy5SZzP7cYsqOIIzmqTfIdzRkx7vPdU=",
   "Source": "ColizeumDaily",
   "BasePath": "_content/ColizeumDaily",
   "Mode": "Default",
@@ -16,23 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\123.html",
-      "SourceId": "ColizeumDaily",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\",
-      "BasePath": "_content/ColizeumDaily",
-      "RelativePath": "123.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\123.html"
-    },
     {
       "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\css\\bgimage.jpg",
       "SourceId": "ColizeumDaily",
@@ -66,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\js\\regPage.js",
+      "SourceId": "ColizeumDaily",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\",
+      "BasePath": "_content/ColizeumDaily",
+      "RelativePath": "js/regPage.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\regPage.js"
     },
     {
       "Identity": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\wwwroot\\js\\site.js",

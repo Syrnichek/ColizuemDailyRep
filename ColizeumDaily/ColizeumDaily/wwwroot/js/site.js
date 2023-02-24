@@ -1,50 +1,103 @@
-async function getUser(userNumber) {
-    let url = "/api/userGet?UserNumber=78005553535";
-    let request = await fetch(url);
-    if (request.ok === true)
+async function getUser() {
+    var userNumber = await document.getElementById("userNumber");
+    let url = "/api/userGet?";
+    let request = await fetch(url + new URLSearchParams({UserNumber: userNumber.value}));
+    let obj = JSON.parse(await request.text());
+    
+    
+    try
     {
-        await alert("ebi" + request.text());
+        if (request.ok === true) 
+        {
+            let userNumberBlock = document.getElementById("userNumberBlock");
+            let telegramUserNameBlock = document.getElementById("telegramUserNameBlock");
+            let daysStreakBlock = document.getElementById("daysStreakBlock");
+            let nightPacksStreakBlock = document.getElementById("nightPacksStreakBlock");
+            let visitDateBlock = document.getElementById("visitDateBlock");
+            let nightPackVisitDateBlock = document.getElementById("nightPackVisitDateBlock");
+
+            userNumberBlock.innerHTML = ("Номер пользователя: " + await obj.usernumber);
+            telegramUserNameBlock.innerHTML = ("Телеграм аккаунт пользователя: " + await obj.telegramusername);
+            daysStreakBlock.innerHTML = ("Количество дней подряд: " + await obj.daysstreak);
+            nightPacksStreakBlock.innerHTML = ("Количество ночных пакетов подряд: " + await obj.nightpacksstreak);
+            visitDateBlock.innerHTML = ("Дата последнего посещения: " + await obj.visitdate.slice(0,10));
+            nightPackVisitDateBlock.innerHTML = ("Дата последнего ночного пакета: " + await obj.nightpackvisitdate.slice(0,10));
+        } 
+        else 
+        {
+            console.log("sosat " + request.status);
+        }
     }
-    else
+    catch (ex)
     {
-        alert("sosat " + request.status);  
+        console.log(ex);
     }
 }
 
 var getUserButton = document.search.getUserButton;
-getUserButton.addEventListener("click", getUser);
+getUserButton.addEventListener("click", getUser)
 
-function userDailyCheck() {
-    let url = "/api/userVisitCheck?UserNumber=79660747173";
+async function userDailyCheck()
+{
+    let url = "/api/userVisitCheck?";
+    var userNumber = await document.getElementById("userNumber");
+    let request = await fetch(url + new URLSearchParams({UserNumber: userNumber.value}));
     
-    let request = fetch(url);
-    if (request.status === 245)
+    try
     {
-        alert("ebi");
+        if (request.status === 200)
+        {
+            console.log("Пользователь отмечен");
+            alert("Пользователь отмечен");
+        }
+        else if(request.status === 246)
+        {
+            console.log("Пользователь сегодня уже отмечался");
+            alert("Пользователь сегодня уже отмечался"); 
+        }
+        else
+        {
+            console.log(request.status);
+        }
     }
-    else
+    catch (ex)
     {
-        alert("sosat " + request.statusText);
+        console.log(ex);
     }
 }
 
 var userDailyCheckButton = document.check.userDailyCheckButton;
 userDailyCheckButton.addEventListener("click", userDailyCheck);
 
-function userNightPackCheck(e) {
-    let userNumber = document.search.userNumber;
-    let val = userNumber.value;
-    if(val.length>5){
-        alert("Недопустимая длина строки");
-        e.preventDefault();
+async function userNightPackCheck() 
+{
+    let url = "/api/nightPacksCheck?";
+    var userNumber = await document.getElementById("userNumber");
+    let request = await fetch(url + new URLSearchParams({UserNumber: userNumber.value}));
+
+    try
+    {
+        if (request.status === 200)
+        {
+            console.log("Пользователь отмечен");
+            alert("Пользователь отмечен");
+        }
+        else if(request.status === 245)
+        {
+            console.log("Пользователь сегодня уже отмечался");
+            alert("Пользователь сегодня уже отмечался");
+        }
+        else
+        {
+            console.log(request.status);
+        }
     }
-    else
-        alert("Отправка разрешена");
+    catch (ex)
+    {
+        console.log(ex);
+    }
 }
 
 var userNightPackCheckButton = document.check.userNightPackCheckButton;
 userNightPackCheckButton.addEventListener("click", userNightPackCheck);
 
-function _displayItems(data) {
-    alert("sosi" + data);
-}
