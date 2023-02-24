@@ -1,0 +1,142 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    background: url("bgimage.jpg") no-repeat fixed center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.usertext{
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+
+.regtext{
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.header {
+    height: auto;
+    background: #ffec20;
+    color: #333;
+}
+
+.content {
+    float: none;
+    border: 3px solid #333;
+    text-align: center;
+    background: #ffec20;
+    padding: 10px;
+    margin: auto;
+    width: 30%;
+}
+
+.sidebar {
+    position: absolute;
+    float: left;
+    top: 60px;
+    left: 0;
+}
+
+a.button{
+    display: grid;
+    background: #ffec20;
+    color: #333333;
+    padding: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 100;
+    height: 47px;
+    width: 150px;
+}
+
+.buttonContent{
+    background: #ffdb1f;
+    color: #333333;
+    padding: 0.375rem 0.75rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 100;
+    height: calc(2.25rem + 2px);
+    width: 200px;
+}
+
+.inputBox{
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.tables{
+    margin: 0 auto;
+    
+    border-spacing: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+th {
+    padding: 10px 20px;
+    background: #ff9623;
+    color: #333333;
+    border-right: 2px solid;
+    font-size: 0.9em;
+}
+
+th:first-child {
+    text-align: left;
+}
+th:last-child {
+    border-right: none;
+}
+
+td {
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 2px solid #56433D;
+    border-bottom: 2px solid #56433D;
+    border-right: 2px solid #56433D;
+}
+td:first-child {
+    border-left: 2px solid #56433D;
+}
+
+td:nth-child(2){
+    text-align: left;
+}

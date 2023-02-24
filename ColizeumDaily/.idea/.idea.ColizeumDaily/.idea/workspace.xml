@@ -57,7 +57,15 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.ColizeumDaily: http">
+  <component name="RunManager" selected="Publish to IIS.ColizeumDaily to IIS">
+    <configuration name="ColizeumDaily" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/ColizeumDaily/bin/Release/net7.0/publish" target_framework="net7.0" uuid_high="-3657308486800358715" uuid_low="-7794082610620679676" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ColizeumDaily to IIS" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
+      <riderPublish configuration="Release" platform="Any CPU" publish_profile="&lt;no publish profile&gt;" uuid_high="-3657308486800358715" uuid_low="-7794082610620679676" />
+      <method v="2" />
+    </configuration>
     <configuration name="123.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ColizeumDaily/ColizeumDaily/wwwroot/123.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -147,6 +155,9 @@
       <workItem from="1676996933581" duration="462000" />
       <workItem from="1677229563332" duration="294000" />
       <workItem from="1677229950868" duration="22547000" />
+      <workItem from="1677261026246" duration="826000" />
+      <workItem from="1677261877157" duration="1152000" />
+      <workItem from="1677263685442" duration="809000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ColizeumDaily</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body style="text-align: center;">
+
+<div>
+    <header class="header">
+        <p style="font-size: 30px; margin: 0; padding: 10px 1em;">Colizeum Daily</p>
+    </header>
+    
+    <p>
+    </p>
+    
+    <main class="content">
+        <p style="font-size: 30px; margin: 0; padding: 1em 0;">Добро пожаловать. Cнова</p>
+        
+        <form name="search" onsubmit="return false;">
+            <input class="inputBox" type="text" id="userNumber" placeholder="Номер пользователя"/>
+            <input class="buttonContent" type="submit" name ="getUserButton" value="Поиск"> 
+        </form>
+        
+        <p>
+        </p>
+        <div class="usertext">
+            <div id="userNumberBlock"></div>
+            <div id="telegramUserNameBlock"></div>
+            <div id="daysStreakBlock"></div>
+            <div id="nightPacksStreakBlock"></div>
+            <div id="visitDateBlock"></div>
+            <div id="nightPackVisitDateBlock"></div>
+        </div>
+        <p>
+        </p>
+        
+        <form name="check" onsubmit="return false;">
+            <button class="buttonContent" type="submit" name ="userDailyCheckButton"> Ежедневный бонус</button>
+            <button class="buttonContent" type="submit" name ="userNightPackCheckButton"> Ночной пакет</button>
+        </form>
+    </main>
+</div>
+
+<div class="sidebar" style="padding: 16px;">
+    <p>
+        <a class="button" href="mainPage.html"> Акции</a>
+    </p>
+    <p>
+        <a class="button" href="registrationPage.html"> Регистрация</a>
+    </p>
+</div>
+
+<script src = "js/site.js"> </script>
+
+</body>
+</html>
