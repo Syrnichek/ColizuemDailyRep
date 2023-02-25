@@ -6,57 +6,78 @@ namespace ColizeumDaily.Services;
 
 public class ManageUserService : IManageUserService
 {
+    private readonly ILogger<ManageUserService> _logger;
     
-    
-    
-    public UserModel UserGet(int UserNumber)
+    public ManageUserService(ILogger<ManageUserService> logger)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
- 
-        var options = optionsBuilder.Options;
-
-        ApplicationContext applicationContext = new ApplicationContext(options);
-        UserModel user = applicationContext.users.FirstOrDefault(u => u.usernumber == UserNumber);
-        return user;
+        _logger = logger;
     }
 
-    public void UserVisitCheck(int UserNumber)
+    public UserModel UserGet(string UserNumber)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
- 
         var options = optionsBuilder.Options;
-        
-        ApplicationContext applicationContext = new ApplicationContext(options);
-        var user = UserGet(UserNumber);
-        user.daysstreak++;
-        user.visitdate = DateTime.UtcNow.AddHours(3);
-        applicationContext.users.Update(user);
-        applicationContext.SaveChanges();
-    }
 
-    public void NightPacksCheck(int UserNumber)
-    {
-        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
- 
-        var options = optionsBuilder.Options;
-        
-        ApplicationContext applicationContext = new ApplicationContext(options);
-        var user = UserGet(UserNumber);
-        user.nightpacksstreak++;
-        user.visitdate = DateTime.UtcNow.AddHours(3);
-        applicationContext.users.Update(user);
-        applicationContext.SaveChanges();
-    }
-
-    public void UserReg(int UserNumber, string TelegramUserName)
-    {
-        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
- 
-        var options = optionsBuilder.Options;
-        
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
-            UserModel user = new UserModel { usernumber = UserNumber, telegramusername = TelegramUserName};
+            UserModel user = applicationContext.users.FirstOrDefault(u => u.usernumber == UserNumber);
+            if (user == null)
+                _logger.LogInformation("Введите правильное значение номера");
+            return user;
+        }
+    }
+
+    public void UserVisitCheck(string UserNumber)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+ 
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            var user = UserGet(UserNumber);
+            
+            user.daysstreak++;
+            user.visitdate = DateTime.UtcNow.AddHours(3);
+            applicationContext.users.Update(user);
+            applicationContext.SaveChanges();
+        }
+    }
+
+    public void NightPacksCheck(string UserNumber)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+ 
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            var user = UserGet(UserNumber);
+            if (user.visitdate.Date == DateTime.Now.Date)
+            {
+                throw new Exception("User is already checked");
+            }
+            user.nightpacksstreak++;
+            user.visitdate = DateTime.UtcNow.AddHours(3);
+            applicationContext.users.Update(user);
+            applicationContext.SaveChanges();
+        }
+    }
+
+    public void UserReg(string UserNumber, string TelegramUserName)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+ 
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            if (applicationContext.users.FirstOrDefault(u => u.usernumber == UserNumber) != null)
+            {
+                throw new Exception("User already exists");
+            }
+
+            UserModel user = new UserModel { usernumber = UserNumber, telegramusername = TelegramUserName };
             applicationContext.users.Add(user);
             applicationContext.SaveChanges();
         }

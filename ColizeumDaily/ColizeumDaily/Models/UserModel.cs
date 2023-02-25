@@ -7,7 +7,8 @@ public class UserModel
     public int id { get; set; }
     
     [Phone]
-    public int usernumber { get; set; }
+    [Required]
+    public string usernumber { get; set; }
     
     public string? telegramusername { get; set; }
 

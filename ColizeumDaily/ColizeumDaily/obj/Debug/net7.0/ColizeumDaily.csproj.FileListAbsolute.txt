@@ -76,3 +76,14 @@ C:\Users\Mufiesh.DESKTOP-S9IMMIL\Documents\Repos\ColizuemDailyRep\ColizeumDaily\
 C:\Users\Mufiesh.DESKTOP-S9IMMIL\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\obj\Debug\net7.0\ColizeumDaily.pdb
 C:\Users\Mufiesh.DESKTOP-S9IMMIL\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\obj\Debug\net7.0\ColizeumDaily.genruntimeconfig.cache
 C:\Users\Mufiesh.DESKTOP-S9IMMIL\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\obj\Debug\net7.0\ref\ColizeumDaily.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\System.Web.Mvc.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\System.Web.Razor.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\System.Web.Helpers.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\System.Web.WebPages.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\System.Web.Http.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\ColizeumDaily\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

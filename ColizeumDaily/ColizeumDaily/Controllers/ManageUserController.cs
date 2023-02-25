@@ -15,29 +15,46 @@ public class ManageUserController : Controller
     
     [HttpGet]
     [Route("api/userGet")]
-    public UserModel UserGet(int UserNumber)
+    public UserModel UserGet(string UserNumber)
     {
         return _manageUserService.UserGet(UserNumber);
     }
     
     [HttpGet]
     [Route("api/userVisitCheck")]
-    public void UserVisitCheck(int UserNumber)
+    public IActionResult UserVisitCheck(string UserNumber)
     {
         _manageUserService.UserVisitCheck(UserNumber);
+        return Ok();
     }
 
     [HttpGet]
     [Route("api/nightPacksCheck")]
-    public void NightPacksCheck(int UserNumber)
+    public IActionResult NightPacksCheck(string UserNumber)
     {
-        _manageUserService.NightPacksCheck(UserNumber);
+        try
+        {
+            _manageUserService.NightPacksCheck(UserNumber);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(421, "Сегодня пользователь уже отмечался");
+        }
     }
 
-        [HttpGet]
+    [HttpPost]
     [Route("api/userReg")]
-    public void UserReg(int UserNumber, string TelegramUsername)
+    public IActionResult UserReg(string UserNumber, string TelegramUsername)
     {
-        _manageUserService.UserReg(UserNumber, TelegramUsername);
+        try
+        {
+            _manageUserService.UserReg(UserNumber, TelegramUsername);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(420, "Пользователь уже существует");
+        }
     }
 }
