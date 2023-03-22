@@ -14,14 +14,14 @@ public class ManageUserController : Controller
     }
     
     [HttpGet]
-    [Route("api/userGet")]
+    [Route("api/manageUser/userGet")]
     public UserModel UserGet(string UserNumber)
     {
         return _manageUserService.UserGet(UserNumber);
     }
     
     [HttpGet]
-    [Route("api/userVisitCheck")]
+    [Route("api/manageUser/userVisitCheck")]
     public IActionResult UserVisitCheck(string UserNumber)
     {
         try
@@ -36,7 +36,7 @@ public class ManageUserController : Controller
     }
 
     [HttpGet]
-    [Route("api/nightPacksCheck")]
+    [Route("api/manageUser/nightPacksCheck")]
     public IActionResult NightPacksCheck(string UserNumber)
     {
         try
@@ -51,7 +51,7 @@ public class ManageUserController : Controller
     }
 
     [HttpGet]
-    [Route("api/userReg")]
+    [Route("api/manageUser/userReg")]
     public IActionResult UserReg(string UserNumber, string TelegramUsername)
     {
         try
