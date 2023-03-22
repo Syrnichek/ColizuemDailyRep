@@ -28,6 +28,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -42,6 +43,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -56,7 +58,27 @@
   }
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ColizeumDaily: http">
+    <configuration name="ColizeumDaily" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/ColizeumDaily/bin/Release/net7.0/publish" target_framework="net7.0" uuid_high="-3657308486800358715" uuid_low="-7794082610620679676" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ColizeumDaily to IIS" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
+      <riderPublish configuration="Release" platform="Any CPU" publish_profile="&lt;no publish profile&gt;" uuid_high="-3657308486800358715" uuid_low="-7794082610620679676" />
+      <method v="2" />
+    </configuration>
+    <configuration name="123.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ColizeumDaily/ColizeumDaily/wwwroot/123.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ColizeumDaily/ColizeumDaily/wwwroot/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="mainPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ColizeumDaily/ColizeumDaily/wwwroot/mainPage.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="registrationPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ColizeumDaily/ColizeumDaily/wwwroot/registrationPage.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="registration.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ColizeumDaily/ColizeumDaily/wwwroot/registration.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="ColizeumDaily: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -106,7 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.mainPage.html" />
+        <item itemvalue="JavaScript Debug.registrationPage.html" />
+        <item itemvalue="JavaScript Debug.123.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.registration.html" />
       </list>
     </recent_temporary>
   </component>
@@ -125,6 +151,30 @@
       <workItem from="1675609906021" duration="605000" />
       <workItem from="1675930828090" duration="5962000" />
       <workItem from="1676877425315" duration="23232000" />
+      <workItem from="1676969905526" duration="17468000" />
+      <workItem from="1676996933581" duration="462000" />
+      <workItem from="1677229563332" duration="294000" />
+      <workItem from="1677229950868" duration="22547000" />
+      <workItem from="1677261026246" duration="826000" />
+      <workItem from="1677261877157" duration="1152000" />
+      <workItem from="1677263685442" duration="809000" />
+      <workItem from="1677266769058" duration="208000" />
+      <workItem from="1677267133138" duration="75000" />
+      <workItem from="1677267887876" duration="437000" />
+      <workItem from="1677487065056" duration="1204000" />
+      <workItem from="1677914821818" duration="605000" />
+      <workItem from="1678292922262" duration="8839000" />
+      <workItem from="1678865526146" duration="601000" />
+      <workItem from="1678891510675" duration="12000" />
+      <workItem from="1678893169989" duration="34000" />
+      <workItem from="1678893892535" duration="138000" />
+      <workItem from="1678895507244" duration="24000" />
+      <workItem from="1678953838781" duration="1474000" />
+      <workItem from="1678958833240" duration="630000" />
+      <workItem from="1678968537451" duration="69000" />
+      <workItem from="1678969419929" duration="58000" />
+      <workItem from="1679133991669" duration="1679000" />
+      <workItem from="1679472686188" duration="3135000" />
     </task>
     <servers />
   </component>

@@ -16,5 +16,7 @@ public class UserModel
 
     public int daysstreak { get; set; }
     
+    public DateTime nightpackvisitdate { get; set; }
+    
     public DateTime visitdate { get; set; }
 }

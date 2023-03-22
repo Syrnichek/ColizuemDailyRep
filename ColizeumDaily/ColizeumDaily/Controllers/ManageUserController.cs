@@ -14,22 +14,29 @@ public class ManageUserController : Controller
     }
     
     [HttpGet]
-    [Route("api/userGet")]
+    [Route("api/manageUser/userGet")]
     public UserModel UserGet(string UserNumber)
     {
         return _manageUserService.UserGet(UserNumber);
     }
     
     [HttpGet]
-    [Route("api/userVisitCheck")]
+    [Route("api/manageUser/userVisitCheck")]
     public IActionResult UserVisitCheck(string UserNumber)
     {
-        _manageUserService.UserVisitCheck(UserNumber);
-        return Ok();
+        try
+        {
+            _manageUserService.UserVisitCheck(UserNumber);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(246, "Сегодня пользователь уже отмечался");
+        }
     }
 
     [HttpGet]
-    [Route("api/nightPacksCheck")]
+    [Route("api/manageUser/nightPacksCheck")]
     public IActionResult NightPacksCheck(string UserNumber)
     {
         try
@@ -39,12 +46,12 @@ public class ManageUserController : Controller
         }
         catch (Exception ex)
         {
-            return StatusCode(421, "Сегодня пользователь уже отмечался");
+            return StatusCode(245, "Сегодня пользователь уже отмечался");
         }
     }
 
-    [HttpPost]
-    [Route("api/userReg")]
+    [HttpGet]
+    [Route("api/manageUser/userReg")]
     public IActionResult UserReg(string UserNumber, string TelegramUsername)
     {
         try
