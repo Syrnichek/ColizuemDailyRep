@@ -19,6 +19,13 @@ public class ManageUserController : Controller
     {
         return _manageUserService.UserGet(UserNumber);
     }
+
+    [HttpGet]
+    [Route("api/manageUser/userStockGet")]
+    public string UserStockGet(string UserNumber)
+    {
+        return _manageUserService.UserStockGet(UserNumber);
+    }
     
     [HttpGet]
     [Route("api/manageUser/userVisitCheck")]

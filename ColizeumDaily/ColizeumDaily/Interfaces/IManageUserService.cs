@@ -7,6 +7,8 @@ public interface IManageUserService
 {
     public UserModel UserGet(string UserNumber);
 
+    public string UserStockGet(string UserNumber);
+
     public void UserVisitCheck(string UserNumber);
 
     public void NightPacksCheck(string UserNumber);

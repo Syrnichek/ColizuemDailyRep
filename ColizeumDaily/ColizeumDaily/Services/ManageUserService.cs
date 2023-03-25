@@ -27,6 +27,20 @@ public class ManageUserService : IManageUserService
         }
     }
 
+    public string UserStockGet(string UserNumber)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            var user = UserGet(UserNumber);
+
+            StockModel stock = applicationContext.stocks.FirstOrDefault(s => s.daysstreak == user.daysstreak);
+            return stock.stockdescription;
+        }
+    }
+
     public void UserVisitCheck(string UserNumber)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
