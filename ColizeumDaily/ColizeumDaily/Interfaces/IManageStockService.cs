@@ -4,9 +4,9 @@ namespace ColizeumDaily.Interfaces;
 
 public interface IManageStockService
 {
-    public void StockChange(int daysstreak);
+    public void StockChange(int daysStreak, string stockDescription);
 
-    public void StockAdd(int daysstreak, string stockdescription);
+    public void StockAdd(int daysStreak, string stockDescription);
 
-    public void StockDelete(int daysstreak);
+    public void StockDelete(int daysStreak);
 }

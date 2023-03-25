@@ -10,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IManageUserService, ManageUserService>();
+builder.Services.AddScoped<IManageStockService, ManageStockService>();
 builder.Services.AddHostedService<StreakDeleteHostedService>();
 
 var app = builder.Build();

@@ -6,9 +6,25 @@ namespace ColizeumDaily.Services;
 
 public class ManageStockService : IManageStockService
 {
-    public void StockChange(int daysstreak)
+    private readonly ILogger<ManageStockService> _logger;
+    
+    public ManageStockService(ILogger<ManageStockService> logger)
     {
-        throw new NotImplementedException();
+        _logger = logger;
+    }
+    
+    public void StockChange(int daysStreak, string stockDescription)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            StockModel stock = applicationContext.stocks.FirstOrDefault(s => s.daysstreak == daysStreak);
+            stock.stockdescription = stockDescription;
+            applicationContext.stocks.Update(stock);
+            applicationContext.SaveChanges();
+        }
     }
 
     public void StockAdd(int daysstreak, string stockdescription)
