@@ -7,10 +7,12 @@ namespace ColizeumDaily.Services;
 public class ManageUserService : IManageUserService
 {
     private readonly ILogger<ManageUserService> _logger;
+    private readonly IManageStockService _manageStockService;
     
-    public ManageUserService(ILogger<ManageUserService> logger)
+    public ManageUserService(ILogger<ManageUserService> logger, IManageStockService manageStockService)
     {
         _logger = logger;
+        _manageStockService = manageStockService;
     }
 
     public UserModel UserGet(string UserNumber)
@@ -50,15 +52,26 @@ public class ManageUserService : IManageUserService
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
             var user = UserGet(UserNumber);
+
+            var stocksList = _manageStockService.StocksGet();
+            var stocksMax = stocksList
             
             if (user.visitdate.Date == DateTime.Now.Date)
             {
                 throw new Exception("User is already checked");
             }
-            user.daysstreak++;
-            user.visitdate = DateTime.UtcNow.AddHours(3);
-            applicationContext.users.Update(user);
-            applicationContext.SaveChanges();
+
+            if (user.daysstreak <= stocksMax)
+            {
+                user.daysstreak++;
+                user.visitdate = DateTime.UtcNow.AddHours(3);
+                applicationContext.users.Update(user);
+                applicationContext.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("User has maximum stock");
+            }
         }
     }
 

@@ -7,6 +7,7 @@ namespace ColizeumDaily.Services
         private int executionCount = 0;
         private readonly ILogger<StreakDeleteHostedService> _logger;
         private Timer? _timer = null;
+        private int weeksCount; 
         
         public StreakDeleteHostedService(ILogger<StreakDeleteHostedService> logger)
         {
@@ -30,21 +31,30 @@ namespace ColizeumDaily.Services
             var applicationContext = new ApplicationContext(options); 
          
             var todayDate = DateTime.Now; 
-            var today = todayDate.DayOfWeek; 
- 
-            if (today == DayOfWeek.Monday && todayDate.Hour == 0) 
-            { 
-                foreach (var user in applicationContext.users.Where(user => user.daysstreak > 0)) 
-                { 
-                    user.daysstreak = 0;
-                } 
-                _logger.LogInformation("Очистка стрика произведена");
+            var today = todayDate.DayOfWeek;
+            
                 
-                foreach (var user in applicationContext.users.Where(user => user.nightpacksstreak > 4))
+            if (today == DayOfWeek.Monday && todayDate.Hour == 0)
+            {
+                _logger.LogInformation("Количество недель: " + weeksCount);
+                weeksCount++;
+                if (weeksCount == 3)
                 {
-                    user.nightpacksstreak = 0;
-                } 
-                _logger.LogInformation("Очистка стрика ночных пакетов призведена");
+                    foreach (var user in applicationContext.users.Where(user => user.daysstreak > 0))
+                    {
+                        user.daysstreak = 0;
+                    }
+
+                    _logger.LogInformation("Очистка стрика произведена");
+
+                    foreach (var user in applicationContext.users.Where(user => user.nightpacksstreak > 4))
+                    {
+                        user.nightpacksstreak = 0;
+                    }
+                    weeksCount = 0;
+                    
+                    _logger.LogInformation("Очистка стрика ночных пакетов призведена");
+                }
             }
 
             applicationContext.SaveChanges(); 

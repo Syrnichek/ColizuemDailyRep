@@ -27,6 +27,19 @@ public class ManageStockService : IManageStockService
         }
     }
 
+    public List<StockModel> StocksGet()
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            IQueryable<StockModel> stockIQueryable = applicationContext.stocks;
+            var stocks = stockIQueryable.Where(p => p.daysstreak != null).ToList();
+            return stocks;
+        }
+    }
+
     public void StockAdd(int daysstreak, string stockdescription)
     {
         throw new NotImplementedException();
