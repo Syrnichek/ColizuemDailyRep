@@ -1,3 +1,4 @@
+using ColizeumDaily.Exceptions;
 using ColizeumDaily.Interfaces;
 using ColizeumDaily.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -36,6 +37,12 @@ public class ManageUserController : Controller
             _manageUserService.UserVisitCheck(UserNumber);
             return Ok();
         }
+
+        catch (MaximumStockException ex)
+        {
+            return StatusCode(247, "Пользователь достиг максимальной награды");
+        }
+        
         catch (Exception ex)
         {
             return StatusCode(246, "Сегодня пользователь уже отмечался");
@@ -51,9 +58,9 @@ public class ManageUserController : Controller
             _manageUserService.NightPacksCheck(UserNumber);
             return Ok();
         }
-        catch (Exception ex)
+        catch (UserAlreadyCheckException ex)
         {
-            return StatusCode(245, "Сегодня пользователь уже отмечался");
+            return StatusCode(246, "Сегодня пользователь уже отмечался");
         }
     }
 
@@ -66,7 +73,7 @@ public class ManageUserController : Controller
             _manageUserService.UserReg(UserNumber, TelegramUsername);
             return Ok();
         }
-        catch (Exception ex)
+        catch (UserAlreadyExistsException ex)
         {
             return StatusCode(420, "Пользователь уже существует");
         }

@@ -1,5 +1,7 @@
+using ColizeumDaily.Exceptions;
 using ColizeumDaily.Models;
 using ColizeumDaily.Interfaces;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace ColizeumDaily.Services;
@@ -48,30 +50,27 @@ public class ManageUserService : IManageUserService
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
  
         var options = optionsBuilder.Options;
-
+        
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
             var user = UserGet(UserNumber);
 
-            var stocksList = _manageStockService.StocksGet();
-            var stocksMax = stocksList
+            StockModel stocks = _manageStockService.StocksGet().OrderByDescending(s => s.daysstreak).FirstOrDefault();
             
             if (user.visitdate.Date == DateTime.Now.Date)
             {
                 throw new Exception("User is already checked");
             }
+            
+            if (user.daysstreak > stocks.daysstreak)
+            {
+                throw new MaximumStockException("User has maximum stock");
+            }
 
-            if (user.daysstreak <= stocksMax)
-            {
-                user.daysstreak++;
-                user.visitdate = DateTime.UtcNow.AddHours(3);
-                applicationContext.users.Update(user);
-                applicationContext.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("User has maximum stock");
-            }
+            user.daysstreak++;
+            user.visitdate = DateTime.UtcNow.AddHours(3);
+            applicationContext.users.Update(user);
+            applicationContext.SaveChanges();
         }
     }
 
@@ -87,7 +86,7 @@ public class ManageUserService : IManageUserService
             
             if (user.nightpackvisitdate.Date == DateTime.Now.Date)
             {
-                throw new Exception("User is already checked");
+                throw new UserAlreadyCheckException("User is already checked");
             }
             user.nightpacksstreak++;
             user.nightpackvisitdate = DateTime.UtcNow.AddHours(3);
@@ -106,7 +105,7 @@ public class ManageUserService : IManageUserService
         {
             if (applicationContext.users.FirstOrDefault(u => u.usernumber == UserNumber) != null)
             {
-                throw new Exception("User already exists");
+                throw new UserAlreadyExistsException("User already exists");
             }
 
             UserModel user = new UserModel { usernumber = UserNumber, telegramusername = TelegramUserName };
