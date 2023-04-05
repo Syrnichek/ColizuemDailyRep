@@ -17,28 +17,28 @@ public class ManageUserService : IManageUserService
         _manageStockService = manageStockService;
     }
 
-    public UserModel UserGet(string UserNumber)
+    public UserModel UserGet(string userNumber)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
         var options = optionsBuilder.Options;
 
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
-            UserModel user = applicationContext.users.FirstOrDefault(u => u.usernumber == UserNumber);
+            UserModel user = applicationContext.users.FirstOrDefault(u => u.usernumber == userNumber);
             if (user == null)
                 _logger.LogInformation("Введите правильное значение номера");
             return user;
         }
     }
 
-    public string UserStockGet(string UserNumber)
+    public string UserStockGet(string userNumber)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
         var options = optionsBuilder.Options;
 
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
-            var user = UserGet(UserNumber);
+            var user = UserGet(userNumber);
 
             StockModel stock = applicationContext.stocks.FirstOrDefault(s => s.daysstreak == user.daysstreak);
             return stock.stockdescription;
@@ -50,23 +50,15 @@ public class ManageUserService : IManageUserService
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
  
         var options = optionsBuilder.Options;
-        
+
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
             var user = UserGet(UserNumber);
-
-            StockModel stocks = _manageStockService.StocksGet().OrderByDescending(s => s.daysstreak).FirstOrDefault();
             
             if (user.visitdate.Date == DateTime.Now.Date)
             {
                 throw new Exception("User is already checked");
             }
-            
-            if (user.daysstreak > stocks.daysstreak)
-            {
-                throw new MaximumStockException("User has maximum stock");
-            }
-
             user.daysstreak++;
             user.visitdate = DateTime.UtcNow.AddHours(3);
             applicationContext.users.Update(user);
@@ -74,7 +66,7 @@ public class ManageUserService : IManageUserService
         }
     }
 
-    public void NightPacksCheck(string UserNumber)
+    public void NightPacksCheck(string userNumber)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
  
@@ -82,7 +74,7 @@ public class ManageUserService : IManageUserService
 
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
-            var user = UserGet(UserNumber);
+            var user = UserGet(userNumber);
             
             if (user.nightpackvisitdate.Date == DateTime.Now.Date)
             {
@@ -95,7 +87,7 @@ public class ManageUserService : IManageUserService
         }
     }
 
-    public void UserReg(string UserNumber, string TelegramUserName)
+    public void UserReg(string userNumber, string telegramUserName)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
  
@@ -103,12 +95,12 @@ public class ManageUserService : IManageUserService
 
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
-            if (applicationContext.users.FirstOrDefault(u => u.usernumber == UserNumber) != null)
+            if (applicationContext.users.FirstOrDefault(u => u.usernumber == userNumber) != null)
             {
                 throw new UserAlreadyExistsException("User already exists");
             }
 
-            UserModel user = new UserModel { usernumber = UserNumber, telegramusername = TelegramUserName };
+            UserModel user = new UserModel { usernumber = userNumber, telegramusername = telegramUserName };
             applicationContext.users.Add(user);
             applicationContext.SaveChanges();
         }
