@@ -50,15 +50,23 @@ public class ManageUserService : IManageUserService
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
  
         var options = optionsBuilder.Options;
-
+        
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
             var user = UserGet(UserNumber);
+
+            StockModel stocks = _manageStockService.StocksGet().OrderByDescending(s => s.daysstreak).FirstOrDefault();
             
             if (user.visitdate.Date == DateTime.Now.Date)
             {
-                throw new Exception("User is already checked");
+                throw new UserAlreadyCheckException("User is already checked");
             }
+            
+            if (user.daysstreak >= stocks.daysstreak)
+            {
+                throw new MaximumStockException("User has maximum stock");
+            }
+
             user.daysstreak++;
             user.visitdate = DateTime.UtcNow.AddHours(3);
             applicationContext.users.Update(user);
@@ -80,6 +88,12 @@ public class ManageUserService : IManageUserService
             {
                 throw new UserAlreadyCheckException("User is already checked");
             }
+
+            if (user.nightpacksstreak >= 3)
+            {
+                throw new MaximumNightPacksException("User has maximum night packs");
+            }
+            
             user.nightpacksstreak++;
             user.nightpackvisitdate = DateTime.UtcNow.AddHours(3);
             applicationContext.users.Update(user);

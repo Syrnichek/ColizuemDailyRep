@@ -37,9 +37,15 @@ public class ManageUserController : Controller
             _manageUserService.UserVisitCheck(UserNumber);
             return Ok();
         }
-        catch (Exception ex)
+
+        catch (MaximumStockException ex)
         {
-            return StatusCode(246, "Пососёшь. Ок?");
+            return StatusCode(247, "Пользователь достиг максимальной награды");
+        }
+        
+        catch (UserAlreadyCheckException ex)
+        {
+            return StatusCode(246, "Сегодня пользователь уже отмечался");
         }
     }
 
@@ -54,7 +60,11 @@ public class ManageUserController : Controller
         }
         catch (UserAlreadyCheckException ex)
         {
-            return StatusCode(247, "Сегодня пользователь уже отмечался");
+            return StatusCode(248, "Сегодня пользователь уже отмечался");
+        }
+        catch (MaximumNightPacksException ex)
+        {
+            return StatusCode(249, "Пользователь получил бонусный ночной пакет");
         }
     }
 

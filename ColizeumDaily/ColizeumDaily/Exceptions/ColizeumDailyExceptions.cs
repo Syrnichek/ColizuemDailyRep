@@ -17,3 +17,9 @@ public class UserAlreadyExistsException : Exception
     public UserAlreadyExistsException(string message)
         : base(message) { }
 }
+
+public class MaximumNightPacksException : Exception
+{
+    public MaximumNightPacksException(string message)
+        : base(message) { }
+}
