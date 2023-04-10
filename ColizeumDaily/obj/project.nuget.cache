@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ahBZy517KDakTTJNZfCaDItxELkaohdCLLk0PXqJbhLpl/JnB9FPIDk0dlk2gzHiuYF+EubEJD9Tnh0+0tiP1A==",
+  "dgSpecHash": "tmY/GTGpXnsC1CYMx0esjo8APvZaYc6tTjSRLMNmd4h64egud09LXsIbXSQudEIrVJIxHzCfnomd87Roa3dFLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily\\ColizeumDaily.csproj",
+  "projectFilePath": "C:\\Users\\Colizeum_Bibirevo\\Documents\\Repos\\ColizuemDailyRep\\ColizeumDaily\\ColizeumDaily.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Colizeum_Bibirevo\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.9\\microsoft.aspnet.mvc.5.2.9.nupkg.sha512",
     "C:\\Users\\Colizeum_Bibirevo\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.9\\microsoft.aspnet.razor.3.2.9.nupkg.sha512",
