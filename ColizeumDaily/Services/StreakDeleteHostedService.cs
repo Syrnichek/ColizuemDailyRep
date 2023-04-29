@@ -1,3 +1,4 @@
+using ColizeumDaily.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ColizeumDaily.Services
@@ -18,22 +19,22 @@ namespace ColizeumDaily.Services
         {
             _logger.LogInformation("Streak Delete Hosted Service running");
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromMinutes(60));
+                TimeSpan.FromMinutes(0.2));
             return Task.CompletedTask;
         }
         
         private void DoWork(object? state)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>(); 
-         
-            var options = optionsBuilder.Options; 
-         
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+            var options = optionsBuilder.Options;
             var applicationContext = new ApplicationContext(options); 
          
             var todayDate = DateTime.Now; 
+            var todayDateUtc = DateTime.UtcNow; 
             var today = todayDate.DayOfWeek;
+
+            var weeks = new WeeksModel();
             
-                
             if (today == DayOfWeek.Monday && todayDate.Hour == 0)
             {
                 _logger.LogInformation("Количество недель: " + weeksCount);
@@ -51,13 +52,21 @@ namespace ColizeumDaily.Services
                     {
                         user.nightpacksstreak = 0;
                     }
-                    weeksCount = 0;
                     
                     _logger.LogInformation("Очистка стрика ночных пакетов призведена");
+                    
+                    while (weeks.id < 14)
+                    {
+                        weeks.weeksdate = todayDate;
+                        weeks.id++;
+                        todayDate = todayDate.AddDays(weeks.id);
+                    }
+                    
+                    _logger.LogInformation("Отсос призведён");
+
+                    weeksCount = 0;
                 }
             }
-
-            applicationContext.SaveChanges(); 
             _logger.LogInformation("Streak Delete Hosted Service running");
         }
         

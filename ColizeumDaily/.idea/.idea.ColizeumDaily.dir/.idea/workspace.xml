@@ -6,7 +6,22 @@
     <projectFile profileName="https">ColizeumDaily.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ac815af-e572-4d06-a0c6-c70eeaeea096" name="Changes" comment="" />
+    <list default="true" id="4ac815af-e572-4d06-a0c6-c70eeaeea096" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Models/WeeksModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/GetWeeksHostedService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ColizeumDaily.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ColizeumDaily.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ApplicationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/StreakDeleteHostedService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/StreakDeleteHostedService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/ColizeumDaily.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/ColizeumDaily.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ref/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ref/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/refint/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/refint/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +29,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Models/StockModel.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OEN1YGOJ1Hxw1aFB09pDdmNAcU" />
   <component name="ProjectViewState">
@@ -92,6 +110,11 @@
       <updated>1681121568174</updated>
       <workItem from="1681121571091" duration="30000" />
       <workItem from="1681121619115" duration="659000" />
+      <workItem from="1682607550224" duration="62000" />
+      <workItem from="1682611736743" duration="290000" />
+      <workItem from="1682619334195" duration="361000" />
+      <workItem from="1682755786260" duration="4526000" />
+      <workItem from="1682769125076" duration="7550000" />
     </task>
     <servers />
   </component>
@@ -101,5 +124,37 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/GetWeeksHostedService.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\Services\GetWeeksHostedService.cs" initialLine="50" containingFunctionPresentation="method 'DoWork'">
+            <startOffsets>
+              <option value="1611" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1653" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/StreakDeleteHostedService.cs</url>
+          <line>57</line>
+          <properties documentPath="C:\Users\Colizeum_Bibirevo\Documents\Repos\ColizuemDailyRep\ColizeumDaily\Services\StreakDeleteHostedService.cs" initialLine="56" containingFunctionPresentation="method 'DoWork'">
+            <startOffsets>
+              <option value="2142" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2163" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,0 +1,71 @@
+using ColizeumDaily.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace ColizeumDaily.Services;
+
+public class GetWeeksHostedService : IHostedService, IDisposable
+{
+    private readonly ILogger<GetWeeksHostedService> _logger;
+    private Timer? _timer = null;
+    private int weeksCount;
+    
+    public GetWeeksHostedService(ILogger<GetWeeksHostedService> logger)
+    {
+        _logger = logger;
+    }
+
+    public Task StartAsync(CancellationToken cancellationToken)
+    {
+        _logger.LogInformation("Get Weeks Hosted Service running");
+        _timer = new Timer(DoWork, null, TimeSpan.Zero,
+            TimeSpan.FromMinutes(10));
+        return Task.CompletedTask;
+    }
+    
+    private void DoWork(object? state)
+    {
+        var todayDate = DateTime.Now; 
+        var today = todayDate.DayOfWeek;
+        
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+        var options = optionsBuilder.Options;
+        var applicationContext = new ApplicationContext(options);
+
+        var weeks = new WeeksModel();
+        
+        if (today == DayOfWeek.Monday && todayDate.Hour == 0)
+        {
+            _logger.LogInformation("Количество недель: " + weeksCount);
+            weeksCount++;
+            if (weeksCount == 3)
+            {
+                while (weeks.id < 14)
+                {
+                    weeks.weeksdate = todayDate; 
+                    todayDate.AddDays(1);
+                }
+                weeksCount = 0;
+                
+                applicationContext.weeks.Add(weeks);
+                applicationContext.SaveChanges();
+                _logger.LogInformation("Отсос призведён");
+            }
+        }
+        
+        _logger.LogInformation("Get Weeks Hosted Service running");
+    }
+    
+    public Task StopAsync(CancellationToken cancellationToken)
+    {
+        _logger.LogInformation("Get Weeks Hosted Service is stopping");
+
+        _timer?.Change(Timeout.Infinite, 0);
+
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _timer?.Dispose();
+    }
+}
