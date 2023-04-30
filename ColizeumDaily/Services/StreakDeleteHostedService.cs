@@ -57,13 +57,16 @@ namespace ColizeumDaily.Services
                     
                     while (weeks.id < 14)
                     {
-                        weeks.weeksdate = todayDate;
+                        weeks.weeksdate = todayDateUtc;
                         weeks.id++;
-                        todayDate = todayDate.AddDays(weeks.id);
+                        todayDateUtc = todayDateUtc.AddDays(1);
+                        applicationContext.weeks.Add(weeks);
+                        applicationContext.SaveChanges();
                     }
                     
                     _logger.LogInformation("Отсос призведён");
 
+                    applicationContext.SaveChanges();
                     weeksCount = 0;
                 }
             }
