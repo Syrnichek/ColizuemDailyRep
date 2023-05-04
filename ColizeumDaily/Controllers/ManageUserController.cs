@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ColizeumDaily.Controllers;
 
+[Route("api/manageUser")]
 public class ManageUserController : Controller
 {
     private readonly IManageUserService _manageUserService;
@@ -15,21 +16,21 @@ public class ManageUserController : Controller
     }
     
     [HttpGet]
-    [Route("api/manageUser/userGet")]
+    [Route("userGet")]
     public UserModel UserGet(string UserNumber)
     {
         return _manageUserService.UserGet(UserNumber);
     }
 
     [HttpGet]
-    [Route("api/manageUser/userStockGet")]
+    [Route("userStockGet")]
     public string UserStockGet(string UserNumber)
     {
         return _manageUserService.UserStockGet(UserNumber);
     }
     
     [HttpGet]
-    [Route("api/manageUser/userVisitCheck")]
+    [Route("userVisitCheck")]
     public IActionResult UserVisitCheck(string UserNumber)
     {
         try
@@ -50,7 +51,7 @@ public class ManageUserController : Controller
     }
 
     [HttpGet]
-    [Route("api/manageUser/nightPacksCheck")]
+    [Route("nightPacksCheck")]
     public IActionResult NightPacksCheck(string UserNumber)
     {
         try
@@ -69,7 +70,7 @@ public class ManageUserController : Controller
     }
 
     [HttpGet]
-    [Route("api/manageUser/userReg")]
+    [Route("userReg")]
     public IActionResult UserReg(string UserNumber, string TelegramUsername)
     {
         try

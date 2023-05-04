@@ -9,9 +9,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<IGetWeekDatesService, GetWeekDatesService>();
 builder.Services.AddScoped<IManageUserService, ManageUserService>();
 builder.Services.AddScoped<IManageStockService, ManageStockService>();
-builder.Services.AddScoped<IGetWeekDatesService, GetWeekDatesService>();
 builder.Services.AddHostedService<GetWeeksHostedService>();
 builder.Services.AddHostedService<StreakDeleteHostedService>();
 
