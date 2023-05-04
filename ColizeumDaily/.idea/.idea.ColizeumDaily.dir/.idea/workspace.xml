@@ -8,6 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4ac815af-e572-4d06-a0c6-c70eeaeea096" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ColizeumDaily.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ColizeumDaily.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/GetWeeksHostedService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/GetWeeksHostedService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/StreakDeleteHostedService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/StreakDeleteHostedService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/ColizeumDaily.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/ColizeumDaily.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ColizeumDaily.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +110,8 @@
       <workItem from="1682755786260" duration="4526000" />
       <workItem from="1682769125076" duration="10605000" />
       <workItem from="1683104226464" duration="316000" />
+      <workItem from="1683126616228" duration="839000" />
+      <workItem from="1683197094221" duration="3717000" />
     </task>
     <servers />
   </component>

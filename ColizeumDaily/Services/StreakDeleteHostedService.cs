@@ -1,4 +1,3 @@
-using ColizeumDaily.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ColizeumDaily.Services
@@ -19,7 +18,7 @@ namespace ColizeumDaily.Services
         {
             _logger.LogInformation("Streak Delete Hosted Service running");
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromMinutes(0.2));
+                TimeSpan.FromMinutes(60));
             return Task.CompletedTask;
         }
         
@@ -30,11 +29,8 @@ namespace ColizeumDaily.Services
             var applicationContext = new ApplicationContext(options); 
          
             var todayDate = DateTime.Now; 
-            var todayDateUtc = DateTime.UtcNow; 
             var today = todayDate.DayOfWeek;
 
-            var weeks = new WeeksModel();
-            
             if (today == DayOfWeek.Monday && todayDate.Hour == 0)
             {
                 _logger.LogInformation("Количество недель: " + weeksCount);
@@ -54,17 +50,6 @@ namespace ColizeumDaily.Services
                     }
                     
                     _logger.LogInformation("Очистка стрика ночных пакетов призведена");
-                    
-                    while (weeks.id < 14)
-                    {
-                        weeks.weeksdate = todayDateUtc;
-                        weeks.id++;
-                        todayDateUtc = todayDateUtc.AddDays(1);
-                        applicationContext.weeks.Add(weeks);
-                        applicationContext.SaveChanges();
-                    }
-                    
-                    _logger.LogInformation("Отсос призведён");
 
                     applicationContext.SaveChanges();
                     weeksCount = 0;

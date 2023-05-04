@@ -18,7 +18,7 @@ public class GetWeeksHostedService : IHostedService, IDisposable
     {
         _logger.LogInformation("Get Weeks Hosted Service running");
         _timer = new Timer(DoWork, null, TimeSpan.Zero,
-            TimeSpan.FromMinutes(10));
+            TimeSpan.FromMinutes(60));
         return Task.CompletedTask;
     }
     
@@ -26,6 +26,7 @@ public class GetWeeksHostedService : IHostedService, IDisposable
     {
         var todayDate = DateTime.Now; 
         var today = todayDate.DayOfWeek;
+        var todayDateUtc = DateTime.UtcNow; 
         
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
         var options = optionsBuilder.Options;
@@ -39,16 +40,19 @@ public class GetWeeksHostedService : IHostedService, IDisposable
             weeksCount++;
             if (weeksCount == 3)
             {
+                applicationContext.weeks.ExecuteDelete();
+                
                 while (weeks.id < 14)
                 {
-                    weeks.weeksdate = todayDate; 
-                    todayDate.AddDays(1);
+                    weeks.weeksdate = todayDateUtc;
+                    weeks.id++;
+                    todayDateUtc = todayDateUtc.AddDays(1);
+                    applicationContext.weeks.Add(weeks);
+                    applicationContext.SaveChanges();
                 }
                 weeksCount = 0;
                 
-                applicationContext.weeks.Add(weeks);
-                applicationContext.SaveChanges();
-                _logger.LogInformation("Отсос призведён");
+                _logger.LogInformation("Дни записаны в базу данных");
             }
         }
         
