@@ -6,12 +6,6 @@ namespace ColizeumDaily.Services;
 
 public class GetWeekDatesService : IGetWeekDatesService
 {
-    private ILogger<GetWeekDatesService> _logger;
-
-    public GetWeekDatesService(ILogger<GetWeekDatesService> logger)
-    {
-        _logger = logger;
-    }
 
     public WeeksModel GetWeekDates()
     {
