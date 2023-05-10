@@ -16,6 +16,17 @@ public class AdminManageService : IAdminManageService
         _manageStockService = manageStockService;
     }
 
+    public void AdminLogin(string AdminName, string AdminPassword, int ClubId)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            
+        }
+    }
+
     public UserModel UserGet(string userNumber)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();

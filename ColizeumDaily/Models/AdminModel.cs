@@ -8,5 +8,5 @@ public class AdminModel
 
     public string adminpassword { get; set; }
 
-    public string clubname { get; set; }
+    public int clubid { get; set; }
 }

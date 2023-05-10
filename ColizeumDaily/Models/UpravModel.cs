@@ -8,5 +8,5 @@ public class UpravModel
 
     public string upravpassword { get; set; }
 
-    public string clubname { get; set; }
+    public int clubid { get; set; }
 }
