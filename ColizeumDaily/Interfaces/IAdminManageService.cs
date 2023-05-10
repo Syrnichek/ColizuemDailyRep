@@ -1,14 +1,15 @@
 using ColizeumDaily.Models;
-using Microsoft.AspNetCore.Mvc;
 
 namespace ColizeumDaily.Interfaces;
 
-public interface IManageUserService
+public interface IAdminManageService
 {
+    public void AdminLogin(string AdminName, string AdminPassword, int ClubId);
+
     public UserModel UserGet(string UserNumber);
-
+    
     public string UserStockGet(string UserNumber);
-
+    
     public void UserVisitCheck(string UserNumber);
 
     public void NightPacksCheck(string UserNumber);

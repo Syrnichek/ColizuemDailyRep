@@ -18,4 +18,109 @@
       <Folder Include="wwwroot\images" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="bin\Debug\net7.0\appsettings.Development.json" />
+      <Content Include="bin\Debug\net7.0\appsettings.json" />
+      <Content Include="bin\Debug\net7.0\ColizeumDaily.deps.json" />
+      <Content Include="bin\Debug\net7.0\ColizeumDaily.dll" />
+      <Content Include="bin\Debug\net7.0\ColizeumDaily.exe" />
+      <Content Include="bin\Debug\net7.0\ColizeumDaily.pdb" />
+      <Content Include="bin\Debug\net7.0\ColizeumDaily.runtimeconfig.json" />
+      <Content Include="bin\Debug\net7.0\ColizeumDaily.staticwebassets.runtime.json" />
+      <Content Include="bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.OpenApi.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll" />
+      <Content Include="bin\Debug\net7.0\Newtonsoft.Json.Bson.dll" />
+      <Content Include="bin\Debug\net7.0\Newtonsoft.Json.dll" />
+      <Content Include="bin\Debug\net7.0\Npgsql.dll" />
+      <Content Include="bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll" />
+      <Content Include="bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll" />
+      <Content Include="bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+      <Content Include="bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+      <Content Include="bin\Debug\net7.0\System.Net.Http.Formatting.dll" />
+      <Content Include="bin\Debug\net7.0\System.Web.Helpers.dll" />
+      <Content Include="bin\Debug\net7.0\System.Web.Http.dll" />
+      <Content Include="bin\Debug\net7.0\System.Web.Mvc.dll" />
+      <Content Include="bin\Debug\net7.0\System.Web.Razor.dll" />
+      <Content Include="bin\Debug\net7.0\System.Web.WebPages.Deployment.dll" />
+      <Content Include="bin\Debug\net7.0\System.Web.WebPages.dll" />
+      <Content Include="bin\Debug\net7.0\System.Web.WebPages.Razor.dll" />
+      <Content Include="bin\Release\net7.0\appsettings.Development.json" />
+      <Content Include="bin\Release\net7.0\appsettings.json" />
+      <Content Include="bin\Release\net7.0\ColizeumDaily.deps.json" />
+      <Content Include="bin\Release\net7.0\ColizeumDaily.dll" />
+      <Content Include="bin\Release\net7.0\ColizeumDaily.exe" />
+      <Content Include="bin\Release\net7.0\ColizeumDaily.pdb" />
+      <Content Include="bin\Release\net7.0\ColizeumDaily.runtimeconfig.json" />
+      <Content Include="bin\Release\net7.0\ColizeumDaily.staticwebassets.runtime.json" />
+      <Content Include="bin\Release\net7.0\Microsoft.AspNetCore.OpenApi.dll" />
+      <Content Include="bin\Release\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+      <Content Include="bin\Release\net7.0\Microsoft.EntityFrameworkCore.dll" />
+      <Content Include="bin\Release\net7.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+      <Content Include="bin\Release\net7.0\Microsoft.OpenApi.dll" />
+      <Content Include="bin\Release\net7.0\Microsoft.Web.Infrastructure.dll" />
+      <Content Include="bin\Release\net7.0\Newtonsoft.Json.Bson.dll" />
+      <Content Include="bin\Release\net7.0\Newtonsoft.Json.dll" />
+      <Content Include="bin\Release\net7.0\Npgsql.dll" />
+      <Content Include="bin\Release\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll" />
+      <Content Include="bin\Release\net7.0\publish\appsettings.Development.json" />
+      <Content Include="bin\Release\net7.0\publish\appsettings.json" />
+      <Content Include="bin\Release\net7.0\publish\ColizeumDaily.deps.json" />
+      <Content Include="bin\Release\net7.0\publish\ColizeumDaily.dll" />
+      <Content Include="bin\Release\net7.0\publish\ColizeumDaily.exe" />
+      <Content Include="bin\Release\net7.0\publish\ColizeumDaily.pdb" />
+      <Content Include="bin\Release\net7.0\publish\ColizeumDaily.runtimeconfig.json" />
+      <Content Include="bin\Release\net7.0\publish\Microsoft.AspNetCore.OpenApi.dll" />
+      <Content Include="bin\Release\net7.0\publish\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+      <Content Include="bin\Release\net7.0\publish\Microsoft.EntityFrameworkCore.dll" />
+      <Content Include="bin\Release\net7.0\publish\Microsoft.EntityFrameworkCore.Relational.dll" />
+      <Content Include="bin\Release\net7.0\publish\Microsoft.OpenApi.dll" />
+      <Content Include="bin\Release\net7.0\publish\Microsoft.Web.Infrastructure.dll" />
+      <Content Include="bin\Release\net7.0\publish\Newtonsoft.Json.Bson.dll" />
+      <Content Include="bin\Release\net7.0\publish\Newtonsoft.Json.dll" />
+      <Content Include="bin\Release\net7.0\publish\Npgsql.dll" />
+      <Content Include="bin\Release\net7.0\publish\Npgsql.EntityFrameworkCore.PostgreSQL.dll" />
+      <Content Include="bin\Release\net7.0\publish\Swashbuckle.AspNetCore.Swagger.dll" />
+      <Content Include="bin\Release\net7.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+      <Content Include="bin\Release\net7.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+      <Content Include="bin\Release\net7.0\publish\System.Net.Http.Formatting.dll" />
+      <Content Include="bin\Release\net7.0\publish\System.Web.Helpers.dll" />
+      <Content Include="bin\Release\net7.0\publish\System.Web.Http.dll" />
+      <Content Include="bin\Release\net7.0\publish\System.Web.Mvc.dll" />
+      <Content Include="bin\Release\net7.0\publish\System.Web.Razor.dll" />
+      <Content Include="bin\Release\net7.0\publish\System.Web.WebPages.Deployment.dll" />
+      <Content Include="bin\Release\net7.0\publish\System.Web.WebPages.dll" />
+      <Content Include="bin\Release\net7.0\publish\System.Web.WebPages.Razor.dll" />
+      <Content Include="bin\Release\net7.0\publish\wwwroot\css\bgimage.jpg" />
+      <Content Include="bin\Release\net7.0\publish\wwwroot\css\site.css" />
+      <Content Include="bin\Release\net7.0\publish\wwwroot\js\regPage.js" />
+      <Content Include="bin\Release\net7.0\publish\wwwroot\js\site.js" />
+      <Content Include="bin\Release\net7.0\publish\wwwroot\mainPage.html" />
+      <Content Include="bin\Release\net7.0\publish\wwwroot\registrationPage.html" />
+      <Content Include="bin\Release\net7.0\Swashbuckle.AspNetCore.Swagger.dll" />
+      <Content Include="bin\Release\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+      <Content Include="bin\Release\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+      <Content Include="bin\Release\net7.0\System.Net.Http.Formatting.dll" />
+      <Content Include="bin\Release\net7.0\System.Web.Helpers.dll" />
+      <Content Include="bin\Release\net7.0\System.Web.Http.dll" />
+      <Content Include="bin\Release\net7.0\System.Web.Mvc.dll" />
+      <Content Include="bin\Release\net7.0\System.Web.Razor.dll" />
+      <Content Include="bin\Release\net7.0\System.Web.WebPages.Deployment.dll" />
+      <Content Include="bin\Release\net7.0\System.Web.WebPages.dll" />
+      <Content Include="bin\Release\net7.0\System.Web.WebPages.Razor.dll" />
+      <Content Remove="bin\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="bin\Release\net7.0\publish\web.config" />
+      <None Remove="bin\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="bin\**" />
+    </ItemGroup>
+
 </Project>

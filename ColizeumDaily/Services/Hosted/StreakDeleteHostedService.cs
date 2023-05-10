@@ -24,16 +24,13 @@ namespace ColizeumDaily.Services
         
         private void DoWork(object? state)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>(); 
-         
-            var options = optionsBuilder.Options; 
-         
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+            var options = optionsBuilder.Options;
             var applicationContext = new ApplicationContext(options); 
          
             var todayDate = DateTime.Now; 
             var today = todayDate.DayOfWeek;
-            
-                
+
             if (today == DayOfWeek.Monday && todayDate.Hour == 0)
             {
                 _logger.LogInformation("Количество недель: " + weeksCount);
@@ -51,13 +48,13 @@ namespace ColizeumDaily.Services
                     {
                         user.nightpacksstreak = 0;
                     }
-                    weeksCount = 0;
                     
                     _logger.LogInformation("Очистка стрика ночных пакетов призведена");
+
+                    applicationContext.SaveChanges();
+                    weeksCount = 0;
                 }
             }
-
-            applicationContext.SaveChanges(); 
             _logger.LogInformation("Streak Delete Hosted Service running");
         }
         
