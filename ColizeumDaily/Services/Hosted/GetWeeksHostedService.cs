@@ -18,7 +18,7 @@ public class GetWeeksHostedService : IHostedService, IDisposable
     {
         _logger.LogInformation("Get Weeks Hosted Service running");
         _timer = new Timer(DoWork, null, TimeSpan.Zero,
-            TimeSpan.FromMinutes(0.2));
+            TimeSpan.FromMinutes(60));
         return Task.CompletedTask;
     }
     
