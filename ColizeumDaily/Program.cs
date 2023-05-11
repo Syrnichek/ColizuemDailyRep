@@ -13,6 +13,7 @@ builder.Services.AddScoped<IGetWeekDatesService, GetWeekDatesService>();
 builder.Services.AddScoped<IUserManageService, UserManageService>();
 builder.Services.AddScoped<IAdminManageService, AdminManageService>();
 builder.Services.AddScoped<IManageStockService, ManageStockService>();
+
 builder.Services.AddHostedService<GetWeeksHostedService>();
 builder.Services.AddHostedService<StreakDeleteHostedService>();
 
