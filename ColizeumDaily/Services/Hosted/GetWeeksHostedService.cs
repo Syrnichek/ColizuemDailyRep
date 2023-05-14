@@ -18,7 +18,7 @@ public class GetWeeksHostedService : IHostedService, IDisposable
     {
         _logger.LogInformation("Get Weeks Hosted Service running");
         _timer = new Timer(DoWork, null, TimeSpan.Zero,
-            TimeSpan.FromMinutes(60));
+            TimeSpan.FromMinutes(0.2));
         return Task.CompletedTask;
     }
     
@@ -44,7 +44,7 @@ public class GetWeeksHostedService : IHostedService, IDisposable
                 
                 while (weeks.id < 14)
                 {
-                    weeks.weeksdate = todayDateUtc;
+                    weeks.weeksdate = todayDateUtc.AddHours(3);
                     weeks.id++;
                     todayDateUtc = todayDateUtc.AddDays(1);
                     applicationContext.weeks.Add(weeks);

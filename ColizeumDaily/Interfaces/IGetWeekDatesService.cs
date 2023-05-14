@@ -4,5 +4,5 @@ namespace ColizeumDaily.Interfaces;
 
 public interface IGetWeekDatesService
 {
-    public WeeksModel GetWeekDates();
+    public List<WeeksModel> GetWeekDates();
 }

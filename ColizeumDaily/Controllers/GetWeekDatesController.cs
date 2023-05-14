@@ -7,7 +7,7 @@ namespace ColizeumDaily.Controllers;
 public class GetWeekDatesController : Controller
 {
     private readonly IGetWeekDatesService _getWeekDatesService;
-    
+
     public GetWeekDatesController(IGetWeekDatesService getWeekDatesService)
     {
         _getWeekDatesService = getWeekDatesService;
@@ -15,9 +15,8 @@ public class GetWeekDatesController : Controller
     
     [HttpGet]
     [Route("api/getWeekDates/getDates")]
-    public WeeksModel GetDates()
+    public List<WeeksModel> GetDates()
     {
-
         return _getWeekDatesService.GetWeekDates();
     }
 }

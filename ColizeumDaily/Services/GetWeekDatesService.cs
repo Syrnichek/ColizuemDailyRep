@@ -7,20 +7,15 @@ namespace ColizeumDaily.Services;
 public class GetWeekDatesService : IGetWeekDatesService
 {
 
-    public WeeksModel GetWeekDates()
+    public List<WeeksModel> GetWeekDates()
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
         var options = optionsBuilder.Options;
-        var weeks = new WeeksModel();
         
         using (ApplicationContext applicationContext = new ApplicationContext(options))
         {
-            foreach (var w in applicationContext.weeks)
-            {
-                weeks = w;
-            }
+            IEnumerable<WeeksModel> weeksIEnumerable = applicationContext.weeks;
+            return weeksIEnumerable.ToList();
         }
-
-        return weeks;
     }
 }
