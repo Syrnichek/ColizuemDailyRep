@@ -45,8 +45,20 @@ public class ManageStockService : IManageStockService
         throw new NotImplementedException();
     }
 
-    public void StockDelete(int daysstreak)
+    public void StockDelete(int id)
     {
-        throw new NotImplementedException();
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+ 
+        var options = optionsBuilder.Options;
+
+        using (ApplicationContext applicationContext = new ApplicationContext(options))
+        {
+            StockModel stock = applicationContext.stocks.FirstOrDefault(s => s.id == id);
+            if (stock != null)
+            {
+                applicationContext.stocks.Remove(stock);
+                applicationContext.SaveChanges();
+            }
+        }
     }
 }
